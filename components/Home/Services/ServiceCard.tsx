@@ -13,7 +13,7 @@ type ServiceCardProps = {
 const ServiceCard = ({ image, title, description, url }: ServiceCardProps) => {
   return (
     <Link href={url} className="no-underline">
-      <div className="p-6 h-full flex flex-col bg-blue-950 cursor-pointer group relative rounded-xl hover:bg-gradient-to-br from-blue-900 to-purple-600 min-h-[300px] border-amber-300 border-4 ">
+      <div className="p-6 h-full flex flex-col bg-blue-950 cursor-pointer group relative rounded-xl hover:bg-gradient-to-br from-blue-900 to-purple-600 min-h-[300px] border-amber-300 border-3 shadow-[0_0_40px_0_rgba(255,183,0,0.5)]">
         <Image
           src={image}
           alt={title}
