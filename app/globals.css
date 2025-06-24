@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+body {
+  font-family: var(--font-rajdhani), sans-serif;
+}
+
+:root {
+  --hero-bg: white;
+  --text: black;
+  --purple: purple;
+}
+
+.dark {
+  --hero-bg: #0f172a;
+  --text: white;
+  --yellow: rgb(245, 245, 7);
+}
+
+@theme inline {
+  --animate-move: move 5s linear infinite;
+
+  @keyframes move {
+    0% {
+      transform: translateX(-200px);
+    }
+    100% {
+      transform: translateX(200px);
+    }
+  }
+}
+
+@layer components {
+  .footer_link {
+    @apply text-white hover:text-amber-300 transition-colors duration-300;
+  }
+}
