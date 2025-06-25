@@ -4,7 +4,7 @@ import { servicesData } from "./ServicesData";
 
 const Services = () => {
   return (
-    <div id="services" className="pt-8 pb-16 bg-[#0f172a] ">
+    <div id="services" className="pt-32 pb-16 bg-[#0f172a] ">
       <div className="w-[80%] mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           <div>
