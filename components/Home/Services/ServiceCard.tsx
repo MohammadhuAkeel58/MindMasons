@@ -13,25 +13,23 @@ type ServiceCardProps = {
 const ServiceCard = ({ image, title, description, url }: ServiceCardProps) => {
   return (
     <Link href={url} className="no-underline">
-      <div className="p-6 h-full flex flex-col transition-transform transform hover:scale-105 bg-blue-950 cursor-pointer group relative rounded-xl hover:bg-gradient-to-br from-blue-900 to-purple-600 min-h-[300px] border-amber-300 border-3 shadow-[0_0_40px_0_rgba(255,183,0,0.5)] ">
-        <Image
-          src={image}
-          alt={title}
-          width={90}
-          height={90}
-          className="object-contain "
-        />
-        <h1 className="font-semibold text-2xl mt-2 text-white group-hover:text-pink-300 min-h-[60px]">
+      <div className="relative p-6 h-full flex flex-col justify-between bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 shadow-xl hover:shadow-purple-600/30 transition-all duration-300 group hover:-translate-y-2">
+        <div className="flex items-center justify-center mb-4">
+          <Image
+            src={image}
+            alt={title}
+            width={70}
+            height={70}
+            className="object-contain"
+          />
+        </div>
+        <h2 className="text-xl font-semibold text-white group-hover:text-purple-300 transition">
           {title}
-        </h1>
-        <p className=" mt-2 text-xl group-hover:text-gray-100 font-bold text-amber-300">
-          {description}
-        </p>
-        <div className="flex items-center gap-4 mt-6 font-medium text-white">
-          <span>Learn More</span>
-          <span>
-            <GoArrowUpRight />
-          </span>
+        </h2>
+        <p className="text-sm text-gray-300 mt-2">{description}</p>
+        <div className="mt-4 flex items-center gap-2 text-purple-400 group-hover:text-yellow-300 transition">
+          <span className="font-medium">Learn More</span>
+          <GoArrowUpRight className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
         </div>
       </div>
     </Link>

@@ -63,7 +63,7 @@ const Projects = () => {
                 exit={{ opacity: 0, y: 30 }}
                 transition={{ duration: 0.3 }}
                 layout
-                className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-hidden border-4 border-purple-500"
+                className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-hidden"
               >
                 <Image
                   src={project.image}
