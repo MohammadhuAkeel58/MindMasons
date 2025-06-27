@@ -23,8 +23,8 @@ const Review = () => {
   return (
     <div className="pt-16 pb-16 bg-[#0f172a]">
       <div className="w-[90%] md:w-[80%] mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-          <div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
+          <div className="">
             <h1 className="text-lg sm:text-xl md:text-2xl text-yellow-300 font-bold uppercase">
               Testimonials
             </h1>
@@ -35,7 +35,7 @@ const Review = () => {
           <div className="lg:ml-auto">
             <a
               href=""
-              className="relative inline-flex font-bold text-amber-50 justify-start items-center mt-5 text-lg md:text-xl bg-blue-400 px-8 py-2 rounded-2xl hover:bg-red-700 uppercase"
+              className="relative inline-flex font-bold text-amber-50 justify-start items-center text-lg md:text-xl bg-blue-400 px-8 py-2 rounded-2xl hover:bg-red-700 uppercase"
             >
               All Reviews
             </a>
