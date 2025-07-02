@@ -1,8 +1,15 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ServiceCard from "./ServiceCard";
-import { servicesData } from "./ServicesData";
+import { ServiceCardProps } from "./ServiceCard";
+//import { servicesData } from "./ServicesData";
 
 const Services = () => {
+  const [services, setServices] = useState<ServiceCardProps[]>([]);
+  useEffect(() => {
+    fetch("/api/services")
+      .then((res) => res.json())
+      .then((data) => setServices(data));
+  }, []);
   return (
     <div id="services" className="pt-32 pb-20 bg-[#0f172a] text-white">
       <div className="w-[90%] mx-auto max-w-7xl">
@@ -28,7 +35,7 @@ const Services = () => {
 
         {/* Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
-          {servicesData.map((service, index) => (
+          {services.map((service, index) => (
             <ServiceCard
               key={index}
               image={service.image}

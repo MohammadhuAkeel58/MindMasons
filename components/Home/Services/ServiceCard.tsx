@@ -3,7 +3,7 @@ import Link from "next/link";
 import React from "react";
 import { GoArrowUpRight } from "react-icons/go";
 
-type ServiceCardProps = {
+export type ServiceCardProps = {
   image: string;
   title: string;
   description: string;
