@@ -4,6 +4,7 @@ import React from "react";
 import { GoArrowUpRight } from "react-icons/go";
 
 export type ServiceCardProps = {
+  id: string;
   image: string;
   title: string;
   description: string;

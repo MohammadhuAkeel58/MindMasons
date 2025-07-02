@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useEffect, useState } from "react";
 import ServiceCard from "./ServiceCard";
 import { ServiceCardProps } from "./ServiceCard";
@@ -35,13 +37,14 @@ const Services = () => {
 
         {/* Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
-          {services.map((service, index) => (
+          {services.map((service) => (
             <ServiceCard
-              key={index}
+              key={service.id}
               image={service.image}
               title={service.title}
               description={service.description}
               url={service.url || "#"}
+              id={service.id}
             />
           ))}
         </div>
