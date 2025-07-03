@@ -3,7 +3,6 @@
 import React, { useEffect, useState } from "react";
 import ServiceCard from "./ServiceCard";
 import { ServiceCardProps } from "./ServiceCard";
-//import { servicesData } from "./ServicesData";
 
 const Services = () => {
   const [services, setServices] = useState<ServiceCardProps[]>([]);
