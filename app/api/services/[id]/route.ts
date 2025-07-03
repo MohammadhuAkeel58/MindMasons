@@ -1,11 +1,14 @@
-import { prisma } from "@/lib/prisma";
 import { NextRequest, NextResponse } from "next/server";
+import { prisma } from "@/lib/prisma";
 
-export async function PUT(
-  req: NextRequest,
-  context: { params: { id: string } }
-) {
-  const { id } = context.params;
+export async function PUT(req: NextRequest) {
+  const url = new URL(req.url);
+  const id = url.pathname.split("/").pop();
+
+  if (!id) {
+    return new Response("Missing id", { status: 400 });
+  }
+
   const body = await req.json();
 
   const updated = await prisma.service.update({
@@ -16,11 +19,13 @@ export async function PUT(
   return NextResponse.json(updated);
 }
 
-export async function DELETE(
-  _req: NextRequest,
-  context: { params: { id: string } }
-) {
-  const { id } = context.params;
+export async function DELETE(req: NextRequest) {
+  const url = new URL(req.url);
+  const id = url.pathname.split("/").pop();
+
+  if (!id) {
+    return new Response("Missing id", { status: 400 });
+  }
 
   await prisma.service.delete({ where: { id } });
 
